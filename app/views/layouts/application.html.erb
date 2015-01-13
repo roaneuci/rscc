@@ -17,7 +17,6 @@
 	          <span class="icon-bar"></span>
 	          <span class="icon-bar"></span>
 	        </button>
-	        <%= link_to "Posts", root_path, class: "navbar-brand" %>
 	  		</div>
 
 	  		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -33,7 +32,7 @@
 					</ul>
 					<form class="navbar-form navbar-right" role="search">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search">
+							<input type="text" class="form-control" placeholder="Search Posts">
 						</div>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</form>
@@ -46,10 +45,11 @@
 		    <!-- sidebar -->
 		    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
 		      <ul class="nav">
-		        <li class="active"><a href="#">Home</a></li>
-		        <li><a href="#">Link 1</a></li>
-		        <li><a href="#">Link 2</a></li>
-		        <li><a href="#">Link 3</a></li>              
+		        <li><%= link_to "Posts", posts_path %></li>
+		        <li><a href="http://www.roanestate.edu/?6-Advising-Resource-Center-ARC">Advising</a></li>
+		        <li><a href="http://www.roanestate.edu/?9126-Computer-Science">Programs</a></li>
+		        <li><a href="#">Contact</a></li>
+		        <li><a href="#">About</a></li>
 		      </ul>
 		    </div>
 		    <!-- main area -->

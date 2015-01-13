@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @reviews = Review.where(post_id: @post.id).order("created_at DESC")
   end
 
   # GET /posts/new
