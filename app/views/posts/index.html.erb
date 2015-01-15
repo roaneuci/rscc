@@ -1,19 +1,19 @@
 <% if !user_signed_in? %>
   <div class="jumbotron">
     <h1>List of Posts</h1>
-    <p>You need to sign up or sign in to post.</p>
+    <p>Sign up or sign in to post.</p>
   </div>
 <% end %>
 
 
-  <% @posts.each do |post| %>
-  <div class="row">
-    <div class="col-sm-6 col-md-9">
-      <div class="post_wrapper">
-        <h2 class="title"><%= link_to post.title, post %></h2>
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-      </div>
+<% @posts.each do |post| %>
+<div class="row">
+  <div class="col-sm-6 col-md-9">
+    <div class="post_wrapper">
+      <h2 class="title"><%= link_to post.title, post %></h2>
+      <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
     </div>
   </div>
-  <% end %>
+</div>
+<% end %>
 

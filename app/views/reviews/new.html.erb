@@ -1,5 +1,16 @@
+<h1 class="title">
+  <%= @post.title %>
+</h1>
+<p class="date">
+  Submitted <%= time_ago_in_words(@post.created_at) %> Ago
+</p>
+<p class="body">
+  <%= @post.body %>
+</p>
+
+
 <h1>New Review</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', post_path(@post) %>
+<%= link_to 'Cancel', post_path(@post) %>
