@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :reviews, except: [:show, :index]
   end
   root 'posts#index'
+  get '/about', to: 'posts#about'
+  get '/contact', to: 'posts#contact'
 end

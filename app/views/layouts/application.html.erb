@@ -21,14 +21,8 @@
 
 	  		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<% if user_signed_in? %>
-							<li><%= link_to "New Post", new_post_path, class: "active" %></li>
-							<li><%= link_to "Account", edit_user_registration_path %></li>
-							<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-						<% else %>
-							<li><%= link_to "Sign Up", new_user_registration_path, class: "active" %></li>
-							<li><%= link_to "Sign In", new_user_session_path, class: "active" %></li>
-						<% end %>
+						<li><%= image_tag "logo.png" %></li>
+						<li><H3>CS CLUB</H3></li>
 					</ul>
 					<%= form_tag search_posts_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
 						<p>
@@ -45,11 +39,19 @@
 		    <!-- sidebar -->
 		    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
 		      <ul class="nav">
+		      	<% if user_signed_in? %>
+							<li><%= link_to "New Post", new_post_path, class: "active" %></li>
+							<li><%= link_to "Account", edit_user_registration_path %></li>
+							<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+						<% else %>
+							<li><%= link_to "Sign Up", new_user_registration_path, class: "active" %></li>
+							<li><%= link_to "Sign In", new_user_session_path, class: "active" %></li>
+						<% end %>
 		        <li><%= link_to "Posts", posts_path %></li>
 		        <li><a href="http://www.roanestate.edu/?6-Advising-Resource-Center-ARC">Advising</a></li>
 		        <li><a href="http://www.roanestate.edu/?9126-Computer-Science">Programs</a></li>
-		        <li><a href="#">Contact</a></li>
-		        <li><a href="#">About</a></li>
+		        <li><%= link_to "Contact", contact_path %></li>
+		        <li><%= link_to "About", about_path %></li>
 		      </ul>
 		    </div>
 		    <!-- main area -->
