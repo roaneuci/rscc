@@ -2,7 +2,8 @@
   <%= @post.title %>
 </h1>
 <p class="date">
-  Submitted <%= time_ago_in_words(@post.created_at) %> Ago
+  Submitted <%= time_ago_in_words(@post.created_at) %> ago by 
+  <%= User.find(@post.user_id).email %>
 </p>
 <p class="body">
   <%= @post.body %>
